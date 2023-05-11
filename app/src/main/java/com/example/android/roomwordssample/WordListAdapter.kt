@@ -33,11 +33,6 @@ class WordListAdapter (var c: Context
     //var optionsMenuClickListener: OptionsMenuClickListener
 ) : ListAdapter<Word, WordViewHolder>(WORDS_COMPARATOR) {
 
-
-   //interface OptionsMenuClickListener {
-        //fun onOptionsMenuClicked(v: View)
-   //}
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         return WordViewHolder.create(parent)
     }
@@ -45,9 +40,6 @@ class WordListAdapter (var c: Context
         val current = getItem(position)
 
         holder.bind(current.word, c)
-        //holder.wordItemView.setOnClickListener {
-            //optionsMenuClickListener.onOptionsMenuClicked(holder.wordItemView)
-        //}
     }
 
     class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
