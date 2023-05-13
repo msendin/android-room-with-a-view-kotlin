@@ -38,13 +38,11 @@ class WordListAdapter (var c: Context
     }
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
         val current = getItem(position)
-
         holder.bind(current.word, c)
     }
 
     class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val wordItemView: TextView = itemView.findViewById(R.id.textView)
-
         fun bind(text: String?, c: Context) {
             wordItemView.text = text
             wordItemView.setOnClickListener {
@@ -53,7 +51,6 @@ class WordListAdapter (var c: Context
         }
         companion object {
             fun create(parent: ViewGroup): WordViewHolder {
-
                 val view: View = LayoutInflater.from(parent.context)
                     .inflate(R.layout.recyclerview_item, parent, false)
                 return WordViewHolder(view)
@@ -99,7 +96,6 @@ class WordListAdapter (var c: Context
             override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
                 return oldItem === newItem
             }
-
             override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
                 return oldItem.word == newItem.word
             }
