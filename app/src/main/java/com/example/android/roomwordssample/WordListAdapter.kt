@@ -62,24 +62,15 @@ class WordListAdapter (var c: Context
 
             popupMenu.setOnMenuItemClickListener { item ->
                 when (item?.itemId) {
-                    R.id.item1 -> {   // " at position " + getAdapterPosition()
-
-                        // here are the logic to delete an item from the list
+                    R.id.item1 -> {
                         Toast.makeText(c, "Item at position " + adapterPosition + ", option 1 clicked", Toast.LENGTH_SHORT).show()
-                        //val tempWord = p.adapter.getItem(p2)
-                        //wordViewModel.allWords.delete
-                        //p.adapter.getItem('p2')
-                        //adapter.notifyDataSetChanged()
                         return@setOnMenuItemClickListener true
                     }
-                    // in the same way you can implement others
                     R.id.item2 -> {
-                        // define
                         Toast.makeText(c, "Item " + adapterPosition + ", option 2 clicked", Toast.LENGTH_SHORT).show()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.item3 -> {
-                        // define
                         Toast.makeText(c, "Item " + adapterPosition + ", option 3 clicked", Toast.LENGTH_SHORT).show()
                         return@setOnMenuItemClickListener true
                     }
